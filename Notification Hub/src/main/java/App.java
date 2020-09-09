@@ -8,9 +8,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class App {
-    public static ArrayList<Customer> copyCustomerToHundredOne() {
+    public static ArrayList<Customer> copyCustomerToThousandOne() {
         ArrayList list = new ArrayList();
-        for (int i = 0; i < 2002; i++) {
+        for (int i = 0; i < 2001; i++) {
             list.add(new Customer("Murat" + i, "Turan" + i, i + "murat@turan.com", "05391233311"));
         }
         return list;
@@ -30,8 +30,8 @@ public class App {
         com2.addOrderToCompany(new EmailConstantQuota(), new SmsConstantQuota());
 
 
-        Group trendyolEliteCustomers = new Group("Trendyol", copyCustomerToHundredOne());
-        Group kodluyoruzEliteCustomers = new Group("Kodluyoruz", copyCustomerToHundredOne());
+        Group trendyolEliteCustomers = new Group("Trendyol", copyCustomerToThousandOne());
+        Group kodluyoruzEliteCustomers = new Group("Kodluyoruz", copyCustomerToThousandOne());
 
         Customer customerMurat = new Customer("Turan", "Turan", "turan@turan", "05322229944");
 
