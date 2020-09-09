@@ -8,13 +8,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class App {
-    public static ArrayList<Customer> copyCustomerToHundred() {
+    public static ArrayList<Customer> copyCustomerToHundredOne() {
         ArrayList list = new ArrayList();
-        for (int i = 0; i < 101; i++) {
+        for (int i = 0; i < 2002; i++) {
             list.add(new Customer("Murat" + i, "Turan" + i, i + "murat@turan.com", "05391233311"));
         }
-
-        System.out.println(list);
         return list;
     }
 
@@ -32,12 +30,12 @@ public class App {
         com2.addOrderToCompany(new EmailConstantQuota(), new SmsConstantQuota());
 
 
-        Group trendyolEliteCustomers = new Group("Trendyol", copyCustomerToHundred());
-        Group kodluyoruzEliteCustomers = new Group("Kodluyoruz", copyCustomerToHundred());
+        Group trendyolEliteCustomers = new Group("Trendyol", copyCustomerToHundredOne());
+        Group kodluyoruzEliteCustomers = new Group("Kodluyoruz", copyCustomerToHundredOne());
 
         Customer customerMurat = new Customer("Turan", "Turan", "turan@turan", "05322229944");
 
-        Sender sender = new Sender(trendyol, false, false, trendyolEliteCustomers);
+        Sender sender = new Sender(trendyol, true, true, trendyolEliteCustomers);
         Sender sender2 = new Sender(kodluyoruz, false, true, kodluyoruzEliteCustomers);
         Sender sender3 = new Sender(trendyol, false, true, customerMurat);
 
@@ -46,8 +44,8 @@ public class App {
         sender3.send("Bu bir test gönderisidir.");
 
         AccountManager am = new AccountManager(trendyol);
-        am.calculateTheBill();
-        am.acceptPayment(LocalDate.parse("2020-08-03"));
+        System.out.println(am.calculateTheBill());
+        am.acceptPayment(LocalDate.parse("2020-10-09"));
     }
 
 

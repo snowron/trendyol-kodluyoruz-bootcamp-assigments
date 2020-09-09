@@ -48,7 +48,7 @@ class SenderTest {
                 new Payment(), LocalDate.parse("2020-09-03"));
         CompanyOrderManager com = new CompanyOrderManager(trendyol);
         com.addOrderToCompany(new EmailElasticQuota(), new SmsConstantQuota());
-        trendyol.getPayment().markAsBlacklistCompany();
+        trendyol.getPayment().setLastTimePayment(LocalDate.parse("2020-07-07"));
         Group trendyolEliteCustomers = new Group("Trendyol", copyCustomerToHundred());
         Sender sender = new Sender(trendyol, true, true, trendyolEliteCustomers);
 
@@ -127,7 +127,7 @@ class SenderTest {
                 new Payment(), LocalDate.parse("2020-09-03"));
         CompanyOrderManager com = new CompanyOrderManager(trendyol);
         com.addOrderToCompany(new EmailElasticQuota(), new SmsConstantQuota());
-        trendyol.getPayment().markAsBlacklistCompany();
+        trendyol.getPayment().setLastTimePayment(LocalDate.parse("2020-07-07"));
         Group trendyolEliteCustomers = new Group("Trendyol", copyCustomerToHundred());
         Sender sender = new Sender(trendyol, true, true, trendyolEliteCustomers);
 
@@ -180,10 +180,9 @@ class SenderTest {
         assertThat(throwable).hasMessageContaining("The message cant be empty");
         assertThat(throwable).isInstanceOf(MessageCantBeEmpty.class);
     }
-    //DATETIME TESTS
 
     @Test
-    public void it_should_raise_exception__bill_date_must_be_bigger_than_one_month_other_lang() {
+    public void it_should_raise_exception_bill_date_must_be_bigger_than_one_month_other_lang() {
         //Given
         Company trendyol = new Company("Trendyol", "90123125929", "Italy", "trendyol@trendyol.com",
                 new Payment(), LocalDate.parse("2020-09-03"));
@@ -251,8 +250,6 @@ class SenderTest {
         //Then
         AccountManager am = new AccountManager(trendyol);
         assertThat(am.calculateTheBill() == 70.49999999999997);
-
     }
-
 
 }

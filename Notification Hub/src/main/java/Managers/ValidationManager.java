@@ -18,12 +18,9 @@ public class ValidationManager {
     }
 
     public boolean isBillDateBiggerThanOneMonth(LocalDate last, LocalDate next) {
-        System.out.println(ChronoUnit.DAYS.between(last, next));
         if (ChronoUnit.DAYS.between(last, next) < 29) {
             if (isTurkeyCompany()) {
-
                 throw new BillDateMustBeBiggerThanOneMonth("Bir aylık fatura döneminiz için beklemelisiniz");
-
             }
             throw new BillDateMustBeBiggerThanOneMonth("You must wait to complete a month");
         }
@@ -60,7 +57,8 @@ public class ValidationManager {
     }
 
     public void inBlacklistChecker(Company company) {
-        if (company.getPayment().inBlackList()) {
+        if (ChronoUnit.DAYS.between(company.getPayment().getLastTimePayment(), LocalDate.now()) > 60) {
+            company.getPayment().markAsBlacklistCompany();
             if (this.isTurkeyCompany()) {
                 throw new BlacklistException("Karalistede bulundu");
             }
@@ -69,7 +67,6 @@ public class ValidationManager {
     }
 
     public void senderHasNoRequest(Boolean emailWillSend, Boolean smsWillSend) {
-
         if (emailWillSend || smsWillSend) {
         } else {
             if (this.isTurkeyCompany()) {
