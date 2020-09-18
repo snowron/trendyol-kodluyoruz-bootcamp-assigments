@@ -6,7 +6,7 @@ public class WordCount {
         if (sentence == null || sentence.length() == 0) {
             throw new NullPointerException("Sentence is null");
         }
-        String[] signs = {"(", ")", "!", "?", ".", ",", ":", ";", "..."};
+        String[] signs = {"(", ")", "!", "?", ".", ",", ":", ";", "...", "-"};
         String[] wordsArray = sentence.split(" ");
         Set wordSet = new HashSet<String>();
         for (String word : wordsArray) {

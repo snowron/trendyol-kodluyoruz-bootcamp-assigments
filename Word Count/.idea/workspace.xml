@@ -23,12 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="101bd0b8-cadf-40bd-848e-338b6667172c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WordCount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testCases.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WordCount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/WordCountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WordCountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testCases.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testCases.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,14 +70,16 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WordCountTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.WordCountTest.count_WhenStringIsSentencesList_ShouldReturnCalculatedFine">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,21 +93,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordCountTest.count_WhenStringHasDot_ShouldReturn1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WordCountTest.count_WhenStringIsFourDifferentWordButEdge_ShouldReturn2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Word Count" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="WordCountTest" />
-      <option name="METHOD_NAME" value="count_WhenStringHasDot_ShouldReturn1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WordCountTest.count_WhenStringHasQuestionMark_ShouldReturn1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Word Count" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="WordCountTest" />
-      <option name="METHOD_NAME" value="count_WhenStringHasQuestionMark_ShouldReturn1" />
+      <option name="METHOD_NAME" value="count_WhenStringIsFourDifferentWordButEdge_ShouldReturn2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,13 +123,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WordCountTest.count_WhenStringIsTwoDifferentWord_ShouldReturn2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Word Count" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WordCountTest" />
+      <option name="METHOD_NAME" value="count_WhenStringIsTwoDifferentWord_ShouldReturn2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WordCountTest" />
         <item itemvalue="JUnit.WordCountTest.count_WhenStringIsSentencesList_ShouldReturnCalculatedFine" />
+        <item itemvalue="JUnit.WordCountTest.count_WhenStringIsFourDifferentWordButEdge_ShouldReturn2" />
+        <item itemvalue="JUnit.WordCountTest.count_WhenStringIsTwoDifferentWord_ShouldReturn2" />
+        <item itemvalue="JUnit.WordCountTest" />
         <item itemvalue="JUnit.WordCountTest.count_WhenStringIsNull_ShouldThrowNullPointerException" />
-        <item itemvalue="JUnit.WordCountTest.count_WhenStringHasDot_ShouldReturn1" />
-        <item itemvalue="JUnit.WordCountTest.count_WhenStringHasQuestionMark_ShouldReturn1" />
       </list>
     </recent_temporary>
   </component>
@@ -152,6 +152,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600448929881</updated>
       <workItem from="1600448932020" duration="2229000" />
+      <workItem from="1600451723661" duration="466000" />
     </task>
     <servers />
   </component>
@@ -168,28 +169,29 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1600450516841">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600450516841" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1600451162988">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1600452189742">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600451162988" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1600451162988">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600452189742" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1600452189741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600451162988" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1600451162988">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600452189741" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1600452189741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600451162988" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1600451162988">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600452189741" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1600452189742">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600451162988" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600452189742" />
     <state x="277" y="0" key="SettingsEditor" timestamp="1600449651220">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

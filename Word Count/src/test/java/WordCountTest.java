@@ -27,6 +27,27 @@ public class WordCountTest {
     }
 
     @Test
+    public void count_WhenStringIsTwoDifferentWord_ShouldReturn2() {
+        //Arrange
+        WordCount sut = new WordCount();
+        //Act
+        int count = sut.count("Wow lol");
+        //Assert
+        assertThat(count).isEqualTo(2);
+    }
+
+    @Test
+    public void count_WhenStringIsFourDifferentWordButEdge_ShouldReturn2() {
+        //Arrange
+        WordCount sut = new WordCount();
+        //Act
+        int count = sut.count("WOW lol wow LOL");
+        //Assert
+        assertThat(count).isEqualTo(2);
+    }
+
+
+    @Test
     public void count_WhenStringHasComma_ShouldReturn1() {
         //Arrange
         WordCount sut = new WordCount();
