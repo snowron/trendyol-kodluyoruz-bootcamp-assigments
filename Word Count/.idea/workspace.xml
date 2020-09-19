@@ -22,12 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="101bd0b8-cadf-40bd-848e-338b6667172c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WordCount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/WordCountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WordCountTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testCases.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testCases.csv" afterDir="false" />
-    </list>
+    <list default="true" id="101bd0b8-cadf-40bd-848e-338b6667172c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,19 +66,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.WordCountTest.count_WhenStringIsSentencesList_ShouldReturnCalculatedFine">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WordCountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Word Count" />
       <option name="PACKAGE_NAME" value="" />
@@ -153,6 +135,7 @@
       <updated>1600448929881</updated>
       <workItem from="1600448932020" duration="2229000" />
       <workItem from="1600451723661" duration="466000" />
+      <workItem from="1600518018128" duration="5000" />
     </task>
     <servers />
   </component>
