@@ -59,6 +59,12 @@ public class TicTacToeTests {
     }
 
     @Test
+    public void it_should_throw_exception_invalid_parameter_exception_when_wrong_coordinate_with_minus() {
+        Throwable throwable = catchThrowable(() -> sut.playerOneMove(-2, -1));
+        assertThat(throwable).hasMessage("Invalid coordinate").isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
     public void it_should_throw_exception_unsupported_operation_exception_when_player_plays_twice() {
         sut.playerOneMove(0, 1);
         Throwable throwable = catchThrowable(() -> sut.playerOneMove(0, 2));
