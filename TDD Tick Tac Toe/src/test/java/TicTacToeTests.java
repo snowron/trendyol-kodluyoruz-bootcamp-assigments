@@ -19,7 +19,6 @@ public class TicTacToeTests {
     public void it_should_successfully_add_move_to_board_player_one() {
         sut.playerOneMove(2, 0);
         assertThat(sut.getBoard()[2][0]).isEqualTo("X");
-
     }
 
     @Test

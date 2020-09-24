@@ -27,7 +27,7 @@ public class Game {
     }
 
     public void checkIsValid(int horizontal, int vertical) {
-        if (horizontal > 2 || vertical > 2) {
+        if (horizontal > 2 || horizontal < 0 || vertical < 0 || vertical > 2) {
             throw new IllegalArgumentException("Invalid coordinate");
         }
     }
@@ -53,8 +53,6 @@ public class Game {
                         this.board[i][0].charAt(0) == this.board[i][2].charAt(0)) {
                     this.getWinnerNameAndSign(this.board[i][0]);
                 }
-            }
-            for (int i = 0; i < 3; i++) {
                 if (this.board[0][i].charAt(0) == this.board[1][i].charAt(0) &&
                         this.board[0][i].charAt(0) == this.board[2][i].charAt(0)) {
                     this.getWinnerNameAndSign(this.board[0][i]);
