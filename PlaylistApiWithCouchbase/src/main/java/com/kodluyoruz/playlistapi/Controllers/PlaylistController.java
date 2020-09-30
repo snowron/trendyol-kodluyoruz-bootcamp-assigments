@@ -43,6 +43,11 @@ public class PlaylistController {
         return ResponseEntity.ok(allByUserId);
     }
 
+    @GetMapping("/search/{searchKeyword}")
+    public ResponseEntity findPlaylistWithSearch(@PathVariable String searchKeyword) {
+        List<Playlist> allByUserId = playlistService.searchPlaylist(searchKeyword);
+        return ResponseEntity.ok(allByUserId);
+    }
     @PatchMapping
     public ResponseEntity updatePlaylistDetailsById(@RequestBody UpdateRequestBody updateRequestBody) {
         playlistService.updatePlaylistDetailsById(updateRequestBody);

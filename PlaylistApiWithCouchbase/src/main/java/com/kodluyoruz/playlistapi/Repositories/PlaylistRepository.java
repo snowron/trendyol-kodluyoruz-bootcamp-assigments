@@ -2,6 +2,7 @@ package com.kodluyoruz.playlistapi.Repositories;
 
 import com.couchbase.client.java.Cluster;
 import com.couchbase.client.java.Collection;
+import com.couchbase.client.java.json.JsonArray;
 import com.couchbase.client.java.json.JsonObject;
 import com.couchbase.client.java.kv.GetResult;
 import com.couchbase.client.java.query.QueryResult;
@@ -47,4 +48,12 @@ public class PlaylistRepository {
         return query.rowsAs(Playlist.class);
     }
 
+    public List<Playlist> findPlaylistWithSearch(String searchKeyword) {
+        System.out.println(searchKeyword);
+        String statement = "SELECT id,name,description,followersCount,tracks,trackCount,userId FROM Playlist WHERE ANY track IN Playlist.tracks SATISFIES track.name LIKE $tname OR name LIKE $name end";
+        QueryResult query = couchbaseCluster.query(statement,
+                queryOptions().parameters(JsonObject.create().put("name", "%" + searchKeyword + "%")
+                        .put("tname", "%" + searchKeyword + "%")));
+        return query.rowsAs(Playlist.class);
+    }
 }

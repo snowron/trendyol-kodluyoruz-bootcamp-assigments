@@ -45,7 +45,7 @@ public class PlaylistService {
     }
 
     public void addTrackToPlaylist(String id, AddTrackRequestBody track) {
-        Track trackObject = new Track(track.getName(),track.getLength(),track.getArtist());
+        Track trackObject = new Track(track.getName(), track.getLength(), track.getArtist());
         Playlist playlist = playlistRepository.findById(id);
         playlist.addTrack(trackObject);
         playlistRepository.update(playlist);
@@ -61,5 +61,10 @@ public class PlaylistService {
         Playlist playlist = playlistRepository.findById(id);
         playlist.followPlaylist();
         playlistRepository.update(playlist);
+    }
+
+    public List<Playlist> searchPlaylist(String searchKeyword) {
+        List<Playlist> playlistWithSearch = playlistRepository.findPlaylistWithSearch(searchKeyword);
+        return playlistWithSearch;
     }
 }
