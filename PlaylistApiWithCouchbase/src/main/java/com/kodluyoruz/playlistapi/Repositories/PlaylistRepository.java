@@ -50,7 +50,8 @@ public class PlaylistRepository {
 
     public List<Playlist> findPlaylistWithSearch(String searchKeyword) {
         System.out.println(searchKeyword);
-        String statement = "SELECT id,name,description,followersCount,tracks,trackCount,userId FROM Playlist WHERE ANY track IN Playlist.tracks SATISFIES track.name LIKE $tname OR name LIKE $name end";
+        String statement = "SELECT id,name,description,followersCount,tracks,trackCount,userId FROM Playlist WHERE ANY track IN Playlist.tracks SATISFIES track.name" +
+                " LIKE $tname OR name LIKE $name end";
         QueryResult query = couchbaseCluster.query(statement,
                 queryOptions().parameters(JsonObject.create().put("name", "%" + searchKeyword + "%")
                         .put("tname", "%" + searchKeyword + "%")));
